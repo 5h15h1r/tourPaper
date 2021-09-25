@@ -2,6 +2,7 @@ import requests
 import os
 from pathlib import Path
 from urllib.parse import quote
+import tourPaperTask
 
 folder = "/tourpaper/"
 path = str(os.path.join(Path.home())) + folder
@@ -44,3 +45,4 @@ if(os.path.exists(path) == False):
     os.mkdir(path)
 
 readAndAdd()
+tourPaperTask.main()

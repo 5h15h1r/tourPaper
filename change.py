@@ -1,0 +1,2 @@
+import tourPaperTask
+tourPaperTask.main()
