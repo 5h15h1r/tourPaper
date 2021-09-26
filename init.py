@@ -1,7 +1,6 @@
 import requests
 import os
 from pathlib import Path
-from urllib.parse import quote
 import tourPaperTask
 
 folder = "/tourpaper/"
@@ -10,7 +9,7 @@ linksFile = path + "/link.txt"
 listFile = path + "/list.txt"
 
 def addLink(query):
-    query = quote(query)
+    query = query.replace(" ", "-")
     print("adding .. ", query)
 
     endpoint = f"https://api.unsplash.com/photos/random?query={query}&orientation=landscape&topics=wallpaper"
